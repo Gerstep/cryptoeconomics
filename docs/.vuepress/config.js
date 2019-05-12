@@ -57,15 +57,7 @@ module.exports = {
         title,
         collapsable: false,
         children: [
-          '',
-          'getting-started',
-          'basic-config',
-          'assets',
-          'markdown',
-          'using-vue',
-          'custom-themes',
-          'i18n',
-          'deploy'
+          ''
         ]
       }
     ]
