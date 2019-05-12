@@ -12,7 +12,7 @@ module.exports = {
       ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
     ],
     serviceWorker: true,
-    theme: 'vue',
+    //theme: 'vue',
     themeConfig: {
       repo: 'gerstep/cryptoeconomics',
       editLinks: true,
