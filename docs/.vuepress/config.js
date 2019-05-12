@@ -1,7 +1,7 @@
 module.exports = {
     dest: 'docs/.vuepress/dist',
     title: 'CryptoEcon DB',
-    description: 'База знаний по криптоэкономике',
+    description: 'База Знаний по Криптоэкономике',
     head: [
       ['link', { rel: 'icon', href: `/logo.png` }],
       ['link', { rel: 'manifest', href: '/manifest.json' }],
