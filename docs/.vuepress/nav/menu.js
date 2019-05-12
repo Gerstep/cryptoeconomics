@@ -16,7 +16,7 @@ module.exports = [
         link: '/projects/'
     },
     {
-        text: 'Наши проекты',
+        text: 'Другие проекты',
         items: [
             {
                 text: "Митап",
@@ -25,6 +25,10 @@ module.exports = [
             {
                 text: "Форум",
                 link: "https://cp0x.com"
+            },
+            {
+                text: "Телеграм-чат",
+                link: "https://t.me/cryptoeconru"
             }
         ]
     },

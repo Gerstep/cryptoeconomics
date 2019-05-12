@@ -10,14 +10,16 @@
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.47",
     "@vuepress/plugin-google-analytics": "^1.0.0-alpha.47",
     "@vuepress/theme-vue": "^1.0.0-alpha.47",
-    "vuepress": "^1.0.0-alpha.47"
+    "vuepress": "^1.0.0-alpha.47",
+    "vuepress-plugin-autonav": "^0.1.2"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "vuepress-theme-macgs": "github:EasyHexo/vuepress-theme-macgs",
-    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.47"
+    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.47",
+    "glob": "^7.1.4",
+    "vuepress-theme-macgs": "github:EasyHexo/vuepress-theme-macgs"
   }
 }
