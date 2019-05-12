@@ -1,5 +1,7 @@
 module.exports = {
     dest: 'docs/.vuepress/dist',
+    title: 'CryptoEcon DB',
+    description: 'База знаний по криптоэкономике',
     head: [
       ['link', { rel: 'icon', href: `/logo.png` }],
       ['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -13,11 +15,15 @@ module.exports = {
     ],
     serviceWorker: true,
     theme: '',
-    plugins: [  '@vuepress/back-to-top',
-                ['@vuepress/google-analytics', {
-                      ga: 'UA-65451691-2'
-                }]
+    plugins: [  ['@vuepress/back-to-top', true],
+                ['@vuepress/google-analytics', 
+                  {
+                        ga: 'UA-65451691-2'
+                  }],
               ],
+    extraWatchFiles: [
+      '.vuepress/nav/menu.js',
+    ],
     themeConfig: {
       repo: 'gerstep/cryptoeconomics',
       editLinks: true,
@@ -34,33 +40,11 @@ module.exports = {
               buttonText: "Refresh"
             }
           },
-          nav: [
-            {
-              text: 'Главная',
-              link: '/',
-            },
-            {
-              text: 'Технологии',
-              link: '/tech/',
-            },
-            {
-              text: 'Концепции',
-              link: '/concepts/',
-            },
-            {
-              text: 'Проекты',
-              link: '/projects/'
-            },
-            {
-              text: 'Митап',
-              link: 'http://cryptoecon.ru'
-            },
-          ],
+          nav: require('./nav/menu'),
           sidebar: {
             '/tech/': genSidebarConfig('Tech'),
             '/concepts/': genSidebarConfig('Concepts'),
             '/projects/': genSidebarConfig('Projects'),
-            '/': genSidebarConfig('База Знаний'),
           }
         }
       }

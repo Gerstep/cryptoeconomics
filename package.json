@@ -1,4 +1,11 @@
 {
+  "name": "cryptoecon-knowledge-base",
+  "description": "Cryptoeconomics Knowledge Base",
+  "author": {
+    "name": "Stepan Gershunu",
+    "email": "gershuni.stepan@gmail.com"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.47",
     "@vuepress/plugin-google-analytics": "^1.0.0-alpha.47",
@@ -10,6 +17,7 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "vuepress-theme-macgs": "github:EasyHexo/vuepress-theme-macgs"
+    "vuepress-theme-macgs": "github:EasyHexo/vuepress-theme-macgs",
+    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.47"
   }
 }
