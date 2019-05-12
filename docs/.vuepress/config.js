@@ -12,17 +12,17 @@ module.exports = {
       ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
     ],
     serviceWorker: true,
-    //theme: 'vue',
+    theme: '',
     themeConfig: {
       repo: 'gerstep/cryptoeconomics',
       editLinks: true,
       docsDir: 'docs',
       locales: {
         '/': {
-          label: 'English',
+          label: 'Русский',
           selectText: 'Languages',
-          editLinkText: 'Edit this page on GitHub',
-          lastUpdated: 'Last Updated',
+          editLinkText: 'Редактировать эту страницу',
+          lastUpdated: 'Обновлено',
           serviceWorker: {
             updatePopup: {
               message: "New content is available.",
@@ -31,24 +31,16 @@ module.exports = {
           },
           nav: [
             {
-              text: 'Guide',
+              text: 'О Базе Знаний',
               link: '/guide/',
             },
             {
-              text: 'Config Reference',
-              link: '/config/'
+              text: 'Проекты',
+              link: '/projects/'
             },
             {
-              text: 'Default Theme Config',
-              link: '/default-theme-config/'
-            },
-            {
-              text: 'Changelog',
-              link: 'https://github.com/vuejs/vuepress/blob/0.x/CHANGELOG.md'
-            },
-            {
-              text: '1.x',
-              link: 'https://v1.vuepress.vuejs.org/'
+              text: 'Митап',
+              link: 'http://cryptoecon.ru'
             },
           ],
           sidebar: {
