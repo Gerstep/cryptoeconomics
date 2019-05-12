@@ -1,7 +1,9 @@
 {
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.47",
-    "vuepress": "^0.14.11"
+    "@vuepress/plugin-google-analytics": "^1.0.0-alpha.47",
+    "@vuepress/theme-vue": "^1.0.0-alpha.47",
+    "vuepress": "^1.0.0-alpha.47"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",

@@ -1,5 +1,5 @@
 module.exports = {
-    dest: 'vuepress',
+    dest: 'docs/.vuepress/dist',
     head: [
       ['link', { rel: 'icon', href: `/logo.png` }],
       ['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -13,7 +13,11 @@ module.exports = {
     ],
     serviceWorker: true,
     theme: '',
-    plugins: ['@vuepress/back-to-top'],
+    plugins: [  '@vuepress/back-to-top',
+                ['@vuepress/google-analytics', {
+                      ga: 'UA-65451691-2'
+                }]
+              ],
     themeConfig: {
       repo: 'gerstep/cryptoeconomics',
       editLinks: true,
