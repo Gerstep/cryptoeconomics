@@ -13,6 +13,7 @@ module.exports = {
     ],
     serviceWorker: true,
     theme: '',
+    plugins: ['@vuepress/back-to-top'],
     themeConfig: {
       repo: 'gerstep/cryptoeconomics',
       editLinks: true,
@@ -31,8 +32,16 @@ module.exports = {
           },
           nav: [
             {
-              text: 'О Базе Знаний',
-              link: '/guide/',
+              text: 'Главная',
+              link: '/',
+            },
+            {
+              text: 'Технологии',
+              link: '/tech/',
+            },
+            {
+              text: 'Концепции',
+              link: '/concepts/',
             },
             {
               text: 'Проекты',
@@ -44,7 +53,10 @@ module.exports = {
             },
           ],
           sidebar: {
-            '/guide/': genSidebarConfig('Guide')
+            '/tech/': genSidebarConfig('Tech'),
+            '/concepts/': genSidebarConfig('Concepts'),
+            '/projects/': genSidebarConfig('Projects'),
+            '/': genSidebarConfig('База Знаний'),
           }
         }
       }
@@ -55,7 +67,7 @@ module.exports = {
     return [
       {
         title,
-        collapsable: false,
+        collapsable: true,
         children: [
           ''
         ]
