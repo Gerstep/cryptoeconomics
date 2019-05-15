@@ -1,21 +1,18 @@
 const { fs, path } = require('@vuepress/shared-utils')
-// const glob = require('glob');
-// let projectsList = glob.sync('docs/projects/README.md').map(f => '/' + f); 
-// // update the docs/**/*.md pattern with your folder structure 
 
-// still not working
+// Lists all projects in directory excluding README
 const projectsList = fs
   .readdirSync(path.resolve(__dirname, '../projects'))
-  .map(filename => '/projects' + filename.slice(0, -3))
+  .map(filename => filename.slice(0, -3))
   .sort()
+  .filter(notProject => notProject != 'README')
+
 function genSidebarConfig (title) {
   return [
     {
       title,
       collapsable: true,
-      children: [
-        ''
-      ]
+      children: projectsList
     }
   ]
 }
@@ -49,6 +46,7 @@ module.exports = {
   themeConfig: {
     repo: 'gerstep/cryptoeconomics',
     editLinks: true,
+    lastUpdated: true,
     docsDir: 'docs',
     locales: {
       '/': {
@@ -63,7 +61,7 @@ module.exports = {
           }
         },
         nav: require('./nav/menu'),
-        sidebar: 'auto'
+        sidebar: projectsList,
       }
     }
   }
