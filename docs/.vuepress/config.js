@@ -1,21 +1,11 @@
 const { fs, path } = require('@vuepress/shared-utils')
 
 // Lists all projects in directory excluding README
-const projectsList = fs
-  .readdirSync(path.resolve(__dirname, '../projects'))
-  .map(filename => filename.slice(0, -3))
-  .sort()
-  .filter(notProject => notProject != 'README')
-
-function genSidebarConfig (title) {
-  return [
-    {
-      title,
-      collapsable: true,
-      children: projectsList
-    }
-  ]
-}
+// const projectsList = fs
+//   .readdirSync(path.resolve(__dirname, '../projects'))
+//   .map(filename => filename.slice(0, -3))
+//   .sort()
+//   .filter(notProject => notProject != 'README')
 
 module.exports = {
   dest: 'docs/.vuepress/dist',
@@ -65,4 +55,14 @@ module.exports = {
       }
     }
   }
+}
+
+function getProjectsSidebar () {
+  return [
+    {
+      title: 'Проекты',
+      collapsable: true,
+      children: projectsList
+    }
+  ]
 }
