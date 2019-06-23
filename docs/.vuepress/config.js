@@ -51,18 +51,8 @@ module.exports = {
           }
         },
         nav: require('./nav/menu'),
-        sidebar: projectsList,
+        //sidebar: projectsList,
       }
     }
   }
-}
-
-function getProjectsSidebar () {
-  return [
-    {
-      title: 'Проекты',
-      collapsable: true,
-      children: projectsList
-    }
-  ]
 }
